@@ -19,58 +19,79 @@ ________________________________________________________
 
 
 Models and Relationships
-This is a good place for a sweet diagram:
-
+<img width="549" alt="Screen Shot 2022-12-13 at 3 57 21 PM" src="https://user-images.githubusercontent.com/92694120/207478790-f634a2c6-998f-4d70-b26a-dcf070be8e57.png">
 
 My Data Relationships
+_______________________________________________________________
+Buyer
 
-User
-A User has many Pickles, and so on and so forth
+A Buyer has many Items, and Sellers through Items.
 
-id
-username
-password_digest
-firstname
-lastname
-birthday
-favorite color
-Pickle
-A Pickle belongs to a User, and so on
 
-id
-variety
-weight
-price
-description
-API
-Here's where you want to describe each API endpoint you're building/using. You can put this in your front end repo, your back end repo, or both.
+- name
 
-GET /api/users
-Returns a list of all users. Response JSON looks like this:
+- email
 
-{
-  id: 111,
-  username: "johndoe",
-  firstname: "John",
-  lastname: "Doe",
-  etc: "etc"
-}
-POST /api/users
-Creates a new user. Say more about that here. Send this data:
+- password
 
-{ this is what it takes as data }
-And this is what it returns:
+Item
 
-{ this is what you get back }
+An Item belongs to a User, and to a Seller.
+
+
+- name
+
+- price
+
+- details
+
+- category
+
+- condition
+
+Seller
+
+A Seller has many Items, and Buyers through Items.
+
+- name
+
+- email
+
+- password
+
+
+Routes:
+
+
+GET /api/buyers
+- Returns a list of all buyers.
+
+POST /api/sellers
+- Creates a new item listing.
+
+GET/api/sellers
+- Returns a list of all sellers
+
+GET/api/items
+- returns a list of all items.
+
+DELETE /api/items
+- Deletes item listing.
+
+PATCH /api/sellers
+- Edits item listing.
+
+
+
+
 Wireframe / Mockup
-Put your sweet wireframes and mockup images here. Probably only goes in the front end repo.
 
-Wireframe
 
-Another Wireframe
+![IMG_9034](https://user-images.githubusercontent.com/92694120/207706030-bfa1ccd0-f2ae-41df-bf93-84e4ca7504d3.jpg)
+![IMG_9035](https://user-images.githubusercontent.com/92694120/207706044-fdeaddaa-70c4-4ac2-af28-0e8702053626.jpg)
 
-Contact info and other stuff
-Put anything else you want here!
+Github: https://github.com/annabrzabrz
+
 
 
 
