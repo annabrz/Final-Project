@@ -15,15 +15,6 @@ Buyer.create([
 
 ])
 
-Item.create([
-    {name: "Nike Dunks", category: "apparel", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" },
-    {name: "Louis Vuitton Wallet", category: "accesories", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" },
-    {name: "Dior Sunglasses", category: "accessories", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" },
-    {name: "2018 MacBook Pro", category: "electronics", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" },
-    {name: "Desk", category: "furniture", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" },
-    {name: "Coffee Maker", category: "appliances", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new" }
-
-])
 
 Seller.create([
     {name: "Bob Shangy", email:"Bobbyboy249@gmail.com", password: "ilovesara717" },
@@ -32,4 +23,14 @@ Seller.create([
     {name: "George Phillips", email:"Georgiephil@aol.com", password: "jskdbjhlsh888" },
     {name: "Rose Draper", email:"Rosed08@gmail.com", password: "hsdkhiuf838" },
     {name: "Prim Cooper", email:"Cooperprim@yahoo.com", password: "skcoeuj84080" }
+])
+
+Item.create([
+    {name: "Nike Dunks", category: "apparel", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id},
+    {name: "Louis Vuitton Wallet", category: "accesories", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id},
+    {name: "Dior Sunglasses", category: "accessories", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id},
+    {name: "2018 MacBook Pro", category: "electronics", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id},
+    {name: "Desk", category: "furniture", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id},
+    {name: "Coffee Maker", category: "appliances", price: 124, details: "Nike Panda Dunks in size 10", condition: "like new", image: "rb.gy/pawiy7", seller_id: Seller.all.sample.id, buyer_id: Buyer.all.sample.id}
+
 ])
