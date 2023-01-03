@@ -6,7 +6,7 @@ function Header() {
       <h1>
         FlatIron Market
         <span className="logo" role="img">
-          🌱
+          
         </span>
       </h1>
     </header>

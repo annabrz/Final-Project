@@ -19,7 +19,7 @@ function NewItemForm({ addItem }) {
     };
 
 
-    fetch("http://localhost:3000/items", {
+    fetch("http://127.0.0.1:3000/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

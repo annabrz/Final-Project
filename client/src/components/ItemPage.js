@@ -11,7 +11,7 @@ function ItemPage() {
   setItems((items)=>[...items, item])
 }
 useEffect(()=>{
-fetch("http://localhost:3000/items")
+fetch("http://127.0.0.1:3000/items")
 .then (r => r.json())
 .then ((data)=>{
   // console.log(data)

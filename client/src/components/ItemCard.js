@@ -1,9 +1,14 @@
-import React, {useState}from "react";
+import React from "react";
+import ItemDetails from "./ItemDetails"
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 function ItemCard({item}) {
-  const [inStock, setStock] = useState(true)
+const navigate = useNavigate()
 
-  const handleStockClick=()=>(setStock(!inStock))
+const navigateToItemDetails = () => {
+
+  navigate('/ItemDetails')
+}
 
 
   return (
@@ -11,13 +16,11 @@ function ItemCard({item}) {
       <img src={item.image} alt={item.name} />
       <h4>{item.name}</h4>
       <p>Price: {item.price}</p>
-      {inStock ? (
-        <button onClick={handleStockClick}className="primary">For Sale</button>
-      ) : (
-        <button onClick={handleStockClick}>Sold</button>
-      )}
-    </li>
+
+        <button onClick={navigateToItemDetails}>Buy</button>
+
+ </li>
   );
-}
+  }
 
 export default ItemCard;
