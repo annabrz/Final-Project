@@ -1,19 +1,20 @@
 import React from "react";
-import Header from "./Header";
-import ItemPage from "./ItemPage"
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import ItemDetails from "./ItemDetails"
+import Home from "./Home"
 
 
 function App() {
   return (
 
     <div className="App">
-      <Header />
-      <ItemPage />
-      <Link to="/ItemDetails">View Item Details</Link>
+
       <Routes>
           <Route path="/ItemDetails" element= {<ItemDetails />} />
+          <Route
+          path="/"
+          element= {<Home />}
+          />
         </Routes>
     </div>
   );

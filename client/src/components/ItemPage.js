@@ -3,6 +3,7 @@ import NewItemForm from "./NewItemForm";
 import ItemList from "./ItemList";
 import Search from "./Search";
 
+
 function ItemPage() {
   const[items, setItems]= useState([])
   const[searchInput, setSearchInput]= useState('')
@@ -27,6 +28,7 @@ const filterItems = items.filter((item)=>{
       <NewItemForm addItem={addItem}/>
       <Search searchInput={searchInput} setSearchInput={setSearchInput} />
       <ItemList items={filterItems} />
+
     </main>
   );
 }

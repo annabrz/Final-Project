@@ -1,10 +1,18 @@
 import React from 'react';
+import ItemPage from './ItemPage'
 
-function ItemDetails() {
+function ItemDetails({item}) {
   return (
+
     <div>
       <h1>Item Details</h1>
-      <p>This is the item details page</p>
+
+      <img src={item.image} alt={item.name} />
+      <h4>{item.name}</h4>
+      <p>Price: {item.price}</p>
+
+
+
     </div>
   );
 }
