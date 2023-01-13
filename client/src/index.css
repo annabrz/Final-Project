@@ -5,8 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+}
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 30rem;
+  height: 30rem;
+  display: inline-grid;
+  margin: 2rem 4rem;
+  box-shadow: 3px 4px 10px #fea3df;
+  transition: all .2s;
+  border-radius: 3%;
+}
+.new-Item-form {
+  /* text-align: center; */
+  width: 69vh;
+  height: 60vh;
+  border: solid #f18bc0 2vw;
+  box-sizing: border-box;
+  /* margin: 20vw; */
+  padding: 5vw;
+  /* position: relative; */
+  /* justify-content: center; */
+  margin: auto;
+
+}
+.nav-button{
+  color: rgb(241, 98, 196);
+  border: solid #f18bc0 1vw;
 }
 
+.landing-button {
+  display: inline-block;
+  width: 20%;
+  height: 2rem;
+  color: rgb(241, 98, 196);
+  border:0;
+  border-radius: 5px;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 12px;
+  position: center;
+
+}
+.card-image  {
+    width: 70%;
+  }
+
+
+
+.card {
+  margin: 1rem;
+}
+
+/* .logo {
+  width: 69vh;
+  height: 60vh;
+  border: solid #f18bc0 2vw;
+  box-sizing: border-box; */
+
+
+/* } */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

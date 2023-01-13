@@ -1,4 +1,5 @@
                         Flatiron Market
+
 ________________________________________________________
 
 Flatiron Market is the perfect online marketplace for people who are looking to buy and sell ANYTHING. Here you can easily list items for sale without the worry of expensive commission fees, because we don't have any! As someone who is constantly frustrated over expensive seller fees, I built this application to allow users to enjoy a free marketplace.
@@ -10,11 +11,11 @@ User Stories
 ________________________________________________________
 - Users can create an account and log in.
 - Users can list items up for sale.
-- Users can edit or delete listings.
+<!-- - Users can edit or delete listings. -->
 - Users can search for items through a search bar.
 - Users can click on items displayed on home page and be directed to a new page with item details.
 - Users can purchase an item from the item detail page.
-- Users can leave reviews for sellers.
+<!-- - Users can leave reviews for sellers. -->
 
 
 

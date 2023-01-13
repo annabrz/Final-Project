@@ -8,7 +8,7 @@ function Home() {
     return (
         <div>
             <Header />
-            <ItemPage />
+        <h1 className ="intro"> Welcome to FlatMarket, a marketplace without fees! Feel free to shop or post your own items for sale. Make a free account with us today! </h1>
          </div>
     )
 }

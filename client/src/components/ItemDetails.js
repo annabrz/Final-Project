@@ -1,19 +1,27 @@
-import React from 'react';
-import ItemPage from './ItemPage'
+import React from "react"
+import ItemPurchase from "./ItemPurchase"
 
-function ItemDetails({item}) {
+function ItemDetails({items, itemId}) {
+// console.log(items)
+//   const itemDet = items.map((item) => {
+//     return <ItemPurchase  item = {item}/>
+//   })
+
+// if (!items) return <h2>Could not load Items</h2>
+
+
   return (
 
-    <div>
-      <h1>Item Details</h1>
-
-      <img src={item.image} alt={item.name} />
-      <h4>{item.name}</h4>
-      <p>Price: {item.price}</p>
-
-
+    <section>
+    <div className="project-item">
+        <h1>{items[itemId-1].name}</h1>
+        <p>{items[itemId-1].image}</p>
+        <p>{items[itemId-1].price}</p>
+        <p>{items[itemId-1].condition}</p>
+        <p>{items[itemId-1].details}</p>
 
     </div>
+</section>
   );
 }
 
