@@ -10,7 +10,7 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("signup", {
+    fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
       body: JSON.stringify({
         username,
         password,
-        name
+        name,
 
       }),
     })
