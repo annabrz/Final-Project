@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
     end
 
     def create
-        item = Item.create!(name:params[:name], category:params[:category], price:params[:price], details:params[:details], condition:params[:condition])
+        item = Item.create!(name:params[:name], category:params[:category], price:params[:price], details:params[:details], condition:params[:condition], image:params[:image])
         render json: item, status: :created
     end
 
