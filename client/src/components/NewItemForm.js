@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
-function NewItemForm({ addItem }) {
+
+function NewItemForm({ addItem}) {
   const [newName, setName] = useState("");
   const [newCategory, setCategory] = useState("");
   const [newPrice, setPrice] = useState("");
   const [newDetails, setDetails] = useState("");
   const [newCondition, setCondition] = useState("")
   const [newImage, setImage] = useState("")
+  // const [items, setItems] = useState([]);
+
 
   const handleSubmit = (e) => {
     const newItem = {
@@ -17,19 +20,24 @@ function NewItemForm({ addItem }) {
       condition: newCondition,
       image: newImage
     };
+    // const addItem = (item) => {
+    //     setItems([...items, item]);
+    //   }
 
 
-    fetch("http://127.0.0.1:3000/items", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newItem),
-    })
-      .then((r) => r.json())
-      .then((createdItem) => {
-        addItem(createdItem);
-      });
+      fetch("http://127.0.0.1:3000/items", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({newItem}),
+      })
+        .then((r) => r.json())
+        .then((createdItem) => {
+          addItem(createdItem);
+        })
+
+
 
     e.preventDefault();
     setName('')
@@ -53,10 +61,10 @@ function NewItemForm({ addItem }) {
         />
         <input
           onChange={(e) => setCategory(e.target.value)}
-          value={newImage}
+          value={newCategory}
           type="text"
-          name="image"
-          placeholder="Image URL"
+          name="category"
+          placeholder="Category"
         />
         <input
           onChange={(e) => setPrice(e.target.value)}
@@ -71,14 +79,14 @@ function NewItemForm({ addItem }) {
           value={newDetails}
           type="text"
           name="details"
-          placeholder="Item Details"
+          placeholder="Details"
         />
           <input
           onChange={(e) => setCondition(e.target.value)}
           value={newCondition}
           type="text"
-          name="image"
-          placeholder="Item Condition"
+          name="condition"
+          placeholder="Condition"
         />
           <input
           onChange={(e) => setImage(e.target.value)}
@@ -87,6 +95,7 @@ function NewItemForm({ addItem }) {
           name="image"
           placeholder="Image URL"
         />
+
         <button type="submit">
           List item for sale
         </button>

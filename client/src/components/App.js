@@ -5,7 +5,6 @@ import Home from "./Home"
 import NavBar from "./NavBar"
 import ItemPage from "./ItemPage"
 import NewItemForm from "./NewItemForm"
-import ItemCard from "./ItemCard"
 import Login from "./Login";
 import Signup from "./Signup";
 
@@ -16,6 +15,9 @@ function App() {
   const[itemId, setItemId] = useState(null)
   const [currentUser, setCurrentUser] = useState(null);
   const [createAccount, setCreateAccount] = useState(true);
+
+
+
 
   const toggleCreateAccount = () => {
     setCreateAccount(!createAccount);
@@ -37,16 +39,17 @@ function App() {
     setItems(data)})
     },[])
 
-  function getCurrentPage(){
-    switch(page){
-      case "/":
-        return <Home />
-        case "/ItemDetails":
-          return <ItemDetails />
-          default:
-            return <h1> 404 not found</h1>
-    }
-  }
+
+  // function getCurrentPage(){
+  //   switch(page){
+  //     case "/":
+  //       return <Home />
+  //       case "/ItemDetails":
+  //         return <ItemDetails />
+  //         default:
+  //           return <h1> 404 not found</h1>
+  //   }
+  // }
   return (
     <div>
       <NavBar onChangePage={setPage} currentUser={currentUser} setCurrentUser={setCurrentUser} />

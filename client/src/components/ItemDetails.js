@@ -1,24 +1,24 @@
 import React from "react"
-import ItemPurchase from "./ItemPurchase"
+
 
 function ItemDetails({items, itemId}) {
-// console.log(items)
-//   const itemDet = items.map((item) => {
-//     return <ItemPurchase  item = {item}/>
-//   })
-
-// if (!items) return <h2>Could not load Items</h2>
 
 
   return (
+//     <li >
+//     <img  src={itemId.image} alt={itemId.name} />
+//     <h4>{itemId.name}</h4>
+//     <p>Price: ${itemId.price}</p>
 
+
+// </li>
     <section>
     <div className="project-item">
         <h1>{items[itemId-1].name}</h1>
-        <p>{items[itemId-1].image}</p>
-        <p>{items[itemId-1].price}</p>
-        <p>{items[itemId-1].condition}</p>
-        <p>{items[itemId-1].details}</p>
+        <img src={items[itemId-1].image} alt={items[itemId-1].name} />
+        <p>Price: {items[itemId-1].price}</p>
+        <p>Condition: {items[itemId-1].condition}</p>
+        <p>Details: {items[itemId-1].details}</p>
 
     </div>
 </section>
