@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
   private
 
   def found_item
-    Item.find(params[id])
+    Item.find(params[:id])
   end
 
   def item_params

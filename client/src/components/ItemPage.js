@@ -11,6 +11,7 @@ function ItemPage({ setItemId }) {
   const addItem = (item) => {
     setItems((items) => [...items, item]);
   };
+
   useEffect(() => {
     fetch("http://127.0.0.1:3000/items")
       .then((r) => r.json())
@@ -28,7 +29,7 @@ function ItemPage({ setItemId }) {
       <main>
         <NewItemForm addItem={addItem} />
         <Search searchInput={searchInput} setSearchInput={setSearchInput} />
-        <ItemList items={filterItems} setItemId={setItemId} />
+        <ItemList items={filterItems} setItemId={setItemId} setItems={setItems} />
       </main>
     </div>
   );
