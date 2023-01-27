@@ -129,4 +129,3 @@ NavBar
 
 Back end:
 get, post, delete, patch requests
-Migrations -->
