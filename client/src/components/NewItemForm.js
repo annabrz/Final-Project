@@ -23,7 +23,7 @@ function NewItemForm({ addItem }) {
         condition: newCondition,
         image: newImage,
         buyer_id: 1,
-        seller_id: 1
+        seller_id: 1,
       }),
     })
       .then((r) => r.json())

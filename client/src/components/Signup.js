@@ -6,8 +6,6 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("http://localhost:3000/signup", {
@@ -19,7 +17,6 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
         username,
         password,
         name,
-
       }),
     })
       .then((res) => res.json())
@@ -27,7 +24,7 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
   };
 
   return (
-    <div className='relative top-40'>
+    <div className="relative top-40">
       <form className="signup-form">
         <label>Name: </label>
         <input type="text" onChange={(e) => setName(e.target.value)} />
@@ -35,7 +32,6 @@ const Signup = ({ toggleCreateAccount, onSignup }) => {
         <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <label>Password: </label>
         <input type="password" onChange={(e) => setPassword(e.target.value)} />
-
 
         <button>
           <NavLink
